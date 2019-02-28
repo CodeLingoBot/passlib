@@ -26,7 +26,7 @@ func init() {
 	)
 }
 
-// Returns an implementation of Scheme implementing scrypt-sha256
+// NewSHA256 returns an implementation of Scheme implementing scrypt-sha256
 // with the specified parameters.
 func NewSHA256(N, r, p int) abstract.Scheme {
 	return &scryptSHA256Crypter{

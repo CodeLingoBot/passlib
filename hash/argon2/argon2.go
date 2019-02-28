@@ -28,7 +28,7 @@ func init() {
 	)
 }
 
-// Returns an implementation of Scheme implementing argon2
+// New returns an implementation of Scheme implementing argon2
 // with the specified parameters.
 func New(time, memory uint32, threads uint8) abstract.Scheme {
 	return &scheme{

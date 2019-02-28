@@ -25,13 +25,13 @@ func init() {
 	Crypter512 = NewCrypter512(raw.RecommendedRounds)
 }
 
-// Returns a Scheme implementing sha256-crypt using the number of rounds
+// NewCrypter256 returns a Scheme implementing sha256-crypt using the number of rounds
 // specified.
 func NewCrypter256(rounds int) abstract.Scheme {
 	return &sha2Crypter{false, rounds}
 }
 
-// Returns a Scheme implementing sha512-crypt using the number of rounds
+// NewCrypter512 returns a Scheme implementing sha512-crypt using the number of rounds
 // specified.
 func NewCrypter512(rounds int) abstract.Scheme {
 	return &sha2Crypter{true, rounds}
